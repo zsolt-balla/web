@@ -1,5 +1,5 @@
 body{
-    background: white;
+    background: #f0f0f0;
     font-size: 20px;
     color: white;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -13,26 +13,16 @@ body a{
     font-size: 20px;
 }
 
-body a:hover{
-    color: gray;
-}
-
 header{
-    background:#0a852f;
-    color:#ffffff;
+    background:#3f704d;
     padding:30px 0px;
     min-height:60px;
 }
 
 header #pages{
-    vertical-align: middle;
-    float: right;
-}
-
-header li{
-    vertical-align: middle;
-    display: inline;
-    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
 }
 
 header #name{
@@ -72,17 +62,18 @@ header #name{
 }
 
 .card{
-    background: tomato;
+    background: white;
+    color: #444444;
     border-radius: 20px;
     min-width: 300px;
     width: 25%;
     margin:auto;
     padding: 0;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 10);
-    transition: 0.2s;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 10);    
 }
 
 .card:hover{
+    transition: 0.4s;
     box-shadow: 0 0 45px rgba(0, 0, 0, 10);
 }
 
@@ -104,40 +95,63 @@ header #name{
     margin: 0px;
 }
 
+button{
+    color: white;
+    
+    font-size: 20px;
+    padding: 0;
+    
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: none;
+    
+    border: 3px solid #3f704d;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    transition: 0.8s;
+}
+
+.nav-button {
+    /*Refactored the ul in the navbar into flex buttons.
+    Made by swapping colors on buy-button*/
+    border-color: white;
+
+    padding: 15px;
+    margin: 0 15px 0;
+}
+
+.nav-button:hover{
+    background: white;
+}
+
+.nav-button:hover a{
+    /*Had to do this separately because the are LINKS*/
+    color: #3f704d;
+}
+
 .buy-button {
+    color: #3f704d;
+
     min-width: 100px;
     width: 50%;
     margin-left: 40%;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: 20px;
-    padding: 0;
-    
-    background: none;
-    color: blue;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-
-    border: 3px solid blue;
-    border-radius: 8px;
-    cursor: pointer;
-
-    transition: 0.8s;
-    position: relative;
-    overflow: hidden;
 }
 
 .buy-button:hover{
     color: white;
-    background: blue;
-    
+    background: #3f704d;    
 }
 
 footer {
     min-height: 90px;
     width: 100%;
-    background: darkgray;
+    background: rgb(63,112,77);
+    background: linear-gradient(0deg, rgba(63,112,77,1) 0%, rgba(134,163,142,1) 60%, rgba(240,240,240,1) 100%);
     padding: 30px 0px;
-
 }
 
 .footer-container{
