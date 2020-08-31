@@ -51,6 +51,7 @@ header #name{
     height: 100%;
 }
 
+/* Ditched in favour of a wrapped flex display.*/
 .cards{
     max-width: 1200px;
     width: 75%;
@@ -58,29 +59,42 @@ header #name{
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    grid-auto-rows: max-content;
+    gap: 50px;
 }
+
+
+/*
+.cards{
+    max-width: 1200px;
+    width: 75%;
+    padding: 40px 0px 40px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+*/
 
 .card{
     background: white;
     color: #444444;
+
     border-radius: 20px;
     min-width: 300px;
-    width: 25%;
-    margin:auto;
     padding: 0;
     box-shadow: 0 0 30px rgba(0, 0, 0, 10);    
-}
 
-.card:hover{
-    transition: 0.4s;
-    box-shadow: 0 0 45px rgba(0, 0, 0, 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card img{
     border-radius: 20px;
     width: 100%;
-    display: block;
+    min-height: 50%;
+    /*display: block;*/
 }
 
 .card .desc{
@@ -95,9 +109,14 @@ header #name{
     margin: 0px;
 }
 
+.card:hover{
+    transition: 0.4s;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 10);
+}
+
 button{
-    color: white;
-    
+    /*General button properties to be inherited by both
+    buy-button and nav-button*/
     font-size: 20px;
     padding: 0;
     
@@ -116,6 +135,7 @@ button:hover{
 .nav-button {
     /*Refactored the ul in the navbar into flex buttons.
     Made by swapping colors on buy-button*/
+    color: white;
     border-color: white;
 
     padding: 15px;
@@ -134,8 +154,7 @@ button:hover{
 .buy-button {
     color: #3f704d;
 
-    min-width: 100px;
-    width: 50%;
+    width: 160px;
     margin-left: 40%;
     margin-top: 10px;
     margin-bottom: 20px;
