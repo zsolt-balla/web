@@ -67,20 +67,27 @@ header #name{
     padding: 40px 0px 40px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .card{
     background: tomato;
+    border-radius: 20px;
     min-width: 300px;
     width: 25%;
     margin:auto;
     padding: 0;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 3);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 10);
+    transition: 0.2s;
+}
+
+.card:hover{
+    box-shadow: 0 0 45px rgba(0, 0, 0, 10);
 }
 
 .card img{
+    border-radius: 20px;
     width: 100%;
     display: block;
 }
@@ -97,8 +104,32 @@ header #name{
     margin: 0px;
 }
 
-.card .buy-button{
-    text-align: right;
+.buy-button {
+    min-width: 100px;
+    width: 50%;
+    margin-left: 40%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 0;
+    
+    background: none;
+    color: blue;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+    border: 3px solid blue;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-button:hover{
+    color: white;
+    background: blue;
+    
 }
 
 footer {
