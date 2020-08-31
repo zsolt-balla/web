@@ -35,20 +35,58 @@ header #name{
     margin:auto;
 }
 
+#homepage{
+    display: flex;
+    flex-flow: column;
+}
+
 .display{
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 20px;
     margin-bottom: 20px;
-    min-height: 120px;
-    background: tomato;
+    min-height: 420px;
+    background: #3f704d;
     text-align: center;
-    padding: 50px;
+    padding: 100px;
+    color: #444444;
+
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 10);    
+
+    filter: brightness(100%) contrast(60%) grayscale(20%); 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .display a{
-    width: 100%;
-    height: 100%;
+    color: black;
+}
+
+#join{
+    background-image: url(./pots/ws.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#about{
+    background-image: url(./pots/shop.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#sell{
+    background-image: url(./pots/action.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.display:hover{
+    transition: 0.4s;
+    filter: brightness(100%) contrast(100%) grayscale(0%);
+    box-shadow: 0 0 45px rgba(0, 0, 0, 10);
 }
 
 /* Ditched in favour of a wrapped flex display.*/
@@ -82,6 +120,7 @@ header #name{
 
     border-radius: 20px;
     min-width: 300px;
+    max-width: 420px;
     padding: 0;
     box-shadow: 0 0 30px rgba(0, 0, 0, 10);    
 
@@ -94,6 +133,7 @@ header #name{
     border-radius: 20px;
     width: 100%;
     min-height: 50%;
+    filter: grayscale(50%);
     /*display: block;*/
 }
 
@@ -112,6 +152,11 @@ header #name{
 .card:hover{
     transition: 0.4s;
     box-shadow: 0 0 45px rgba(0, 0, 0, 10);
+}
+
+.card:hover img{
+    transition: 0.4s;
+    filter: grayscale(0%);
 }
 
 button{
@@ -180,3 +225,34 @@ footer {
     flex-direction: row;
     justify-content: space-between;
 }
+
+#contact-page {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+}
+
+#map{
+    width: 65%;
+    height:900px;
+}
+
+#contact-panel{
+    width: 35%;
+    height:900px;
+    color: #444444;
+    padding: 30px;
+}
+
+input {
+    font-size: 20px;
+    padding-left: 15px;
+    
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: none;
+    
+    color: white;
+    border: 3px solid white;
+    border-radius: 8px;
+}
+
