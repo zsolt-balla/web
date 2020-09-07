@@ -31,7 +31,7 @@ header #name{
 }
 
 .centered-container{
-    width: 70%;
+    width: 60%;
     margin:auto;
 }
 
@@ -145,6 +145,8 @@ header #name{
     padding: 5px 20px 5px;
 }
 
+#button-text
+
 .card .desc h1{
     margin: 10px 0px 10px;
 }
@@ -252,12 +254,14 @@ footer {
 input {
     font-size: 20px;
     padding-left: 15px;
+
+    width:50%;
+    margin: 30px 25% 0;
     
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     background: none;
     
-    color: white;
-    border: 3px solid white;
+    color: #3f704d;
+    border: 3px solid #3f704d;
     border-radius: 8px;
 }
-
