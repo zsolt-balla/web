@@ -95,26 +95,30 @@ header #name{
 
 /* Ditched in favour of a wrapped flex display.*/
 .cards{
+    min-width: 70%;
+    
     max-width: 1200px;
-    width: 75%;
+    max-width: 90%;
+
     padding: 40px 0px 40px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-auto-rows: max-content;
-    gap: 50px;
+    gap: 40px;
 }
-
 
 /*
 .cards{
+    min-width: 70%;
     max-width: 1200px;
-    width: 75%;
+    
     padding: 40px 0px 40px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: space-between;
 }
 */
 
@@ -123,8 +127,8 @@ header #name{
     color: #444444;
 
     border-radius: 20px;
-    min-width: 300px;
-    max-width: 420px;
+    min-width: 100px;
+    max-width: 400px;
     padding: 0;
     box-shadow: 0 0 30px #888888;    
 
@@ -141,9 +145,13 @@ header #name{
     /*display: block;*/
 }
 
-.card .desc{
-    padding: 5px 20px 5px;
+.card-rest{
+    padding: 5px 20px 20px;
 }
+
+/*.card .desc{
+    padding: 5px 20px 5px;
+}*/
 
 #button-text
 
@@ -207,9 +215,8 @@ button:hover{
     color: #3f704d;
 
     width: 160px;
-    margin-left: 40%;
+    float: right;
     margin-top: 10px;
-    margin-bottom: 20px;
 }
 
 .buy-button:hover{
