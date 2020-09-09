@@ -23,9 +23,14 @@ searchBar.addEventListener('keyup', function(e){
 
         console.log(text);
 
+
+        /*  display='block' vs display='none' messed
+            up the internal structure of the cards,
+            probably by overwriting display: 'flex'
+        */
         if(text.toLowerCase().indexOf(term) != -1){
             //show
-            card.style.display = 'block';
+            card.style.display = 'flex';
         }
         else{
             //hide
