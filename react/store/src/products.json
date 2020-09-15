@@ -1,0 +1,50 @@
+[
+    {
+        "imgsrc": "./pots/cups.jpg",
+        "title": "Cups",
+        "desc": "Unique ceramic cups",
+        "price": 5
+    },
+    {
+        "imgsrc": "./pots/jug-and-cups.jpg",
+        "title": "Jug and cups",
+        "desc": "Playful colors paired with modern shapes",
+        "price": 25
+    },
+    {
+        "imgsrc": "./pots/spotty-bowl.jpg",
+        "title": "Spotty Bowl",
+        "desc": "Handmade bowl with a popular spotted pattern",
+        "price": 9
+    },
+    {
+        "imgsrc": "./pots/teacups.jpg",
+        "title": "Teacups",
+        "desc": "A pair of hand-painted teacups with shiny enamel",
+        "price": 14
+    },
+    {
+        "imgsrc": "./pots/vase.jpg",
+        "title": "Vase",
+        "desc": "A modern and minimalist vase with a mesmerizing deep green colour",
+        "price": 25
+    },
+    {
+        "imgsrc": "./pots/geometric-vase.png",
+        "title": "Geometric Vase",
+        "desc": "Various shapes and colours",
+        "price": 30
+    },
+    {
+        "imgsrc": "./pots/flower-pots.jpg",
+        "title": "Flower pots",
+        "desc": "Terracotta-style pots for small plants in various shapes",
+        "price": 15
+    },
+    {
+        "imgsrc": "./pots/large-pots.jpg",
+        "title": "Large pots",
+        "desc": "Enormous pots for your biggest houseplants",
+        "price": 120
+    }
+]
