@@ -1,0 +1,55 @@
+.CartItem{
+    background: white;
+    color: #444444;
+
+    border-radius: 20px;
+    height: 120px;
+    padding: 0;
+    box-shadow: 0 0 30px #888888;    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.CartItem img{
+    border-radius: 20px;
+    width: 100px;
+    filter: grayscale(50%);
+    /*display: block;*/
+}
+
+.summary{
+    padding: 5px 20px 20px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.CartItem:hover{
+    transition: 0.4s;
+    transform: scale(1.08);
+    box-shadow: 0 0 45px #555555;
+}
+
+.CartItem:hover img{
+    transition: 0.4s;
+    filter: grayscale(0%);
+}
+
+button:hover{
+    transition: 0.8s;
+}
+
+.DropButton {
+    size: 18px;
+    border: 3px solid red;
+    color: red;
+    width: 150px;
+    margin: 25px;
+}
+
+.DropButton:hover{
+    color: white;
+    background: red;    
+}
