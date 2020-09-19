@@ -1,43 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 // Styling:
 import './DisplayCart.css';
 // The card we will be using is the following component:
-import Product from './Product.js';
-// Product data is specified in a JSON file:
-import products from './products.json';
+import CartItem from './CartItem.js';
 
-function DisplayGrid() {
+const DisplayCart = (props) => {
 
-  const [cart, setCart] = useState([
-
-  ])
-
-  const [searchTerm, setSearchTerm] = useState('');
-  
-  // Probably the ugliest and most convoluted callback solution you've ever seen.
-  // [I had a hard time understanding how passing objects from child to parent should work.]
-  //
-  // This function takes a product as a prop and returns another method that, when called,
-  // adds said product to the cart. Yuck.
-  const addItemToCart = (product) => {
-    //console.log('Parent function ran!');
-    //console.log(cart);
-    
-    const addPassedProp = () => {
-      setCart([...cart, product]);
-      console.log('Item added to cart.')
-    }
-    return(addPassedProp);
-  }
+  //const cart = useState(props.cart);
+  const cart = props.cartContent;
+  var dropFunction = props.dropFunc;
 
   return (
     <>
-      <div class="DisplayGrid">
-          {products.map(p => <Product content={p} behaviour={addItemToCart}/>)}
-          {cart.map(i => <CartItem content={i} behaviour={}/>)}
+      <div class="DisplayCart">
+          {cart.map(i => <CartItem content={i} behaviour={dropFunction}/>)}
       </div>
-
     </>
   );
 }
-export default DisplayGrid;
+export default DisplayCart;

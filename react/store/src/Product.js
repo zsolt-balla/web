@@ -11,7 +11,7 @@ const Product = (props) => {
   //Props also includes:
   
   var p = props.content;
-  var makeFunction = props.behaviour(p);
+  var buttonFunction = props.behaviour(p);
   var imgpath = p.imgsrc;
   
   
@@ -24,7 +24,7 @@ const Product = (props) => {
             <h1>{p.title}</h1>
             <p>{p.desc}</p>
           </div>
-          <button onClick={makeFunction} class="buy-button">
+          <button onClick={buttonFunction} class="buy-button">
             <p id="button-text">Buy for €{p.price}</p>
           </button>
       </div>                

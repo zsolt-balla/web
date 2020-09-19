@@ -1,8 +1,7 @@
 import React from 'react';
 import './CartItem.css';
-//import cupsPicture from './assets/pots/cups.jpg';
 
-const Product = (props) => {
+const CartItem = (props) => {
   //Instead of the values within the object from the JSON, I pass
   //down the entire object as a single, unified item. I hope this will 
   //make the backwards referencing easier when making the cart, as the whole 
@@ -27,4 +26,4 @@ const Product = (props) => {
   );
 }
 
-export default Product;
+export default CartItem;
