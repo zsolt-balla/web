@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import NavBar from './NavBar.js';
 import DisplayGrid from './DisplayGrid.js';
 import DisplayCart from './DisplayCart.js';
-import Footer from './Footer.js';
 
 function App() {
   const [cart, setCart] = useState([])
@@ -32,6 +30,8 @@ function App() {
       // remove object
       //temp.splice(removeIndex, 1);
       //setCart(temp);
+      
+      // Short version without using setCart method:
       var removeIndex = cart.map(function(item) { return item.title; }).indexOf(product.title);
       cart.splice(removeIndex, 1);
     }
@@ -40,10 +40,8 @@ function App() {
   
   return (
     <div className="App">
-      <NavBar />
       <DisplayGrid buyFunc={addItemToCart}/>
       <DisplayCart cartContent={cart} dropFunc={removeItem}/>    
-      <Footer />
     </div>
   );
 }

@@ -1,0 +1,30 @@
+.Contact, .About, .NotFound{
+    font-size: 36px;
+    background: white;
+    color: #444444;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    min-height: 600px;
+}
+
+.Contact{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.mapContainer{
+    width: 75%;
+    min-width: 600px;
+    min-height: 800px;
+}
+
+.contactPanel{
+    padding: 30px;
+    width: 25%;
+}
+
