@@ -1,10 +1,13 @@
 .CartItem{
     background: white;
     color: #444444;
+    font-size: 13px;
 
     border-radius: 20px;
     height: 120px;
+    width: 400px;
     padding: 0;
+    margin-bottom: 20px;
     box-shadow: 0 0 30px #888888;    
 
     display: flex;
@@ -28,7 +31,7 @@
 
 .CartItem:hover{
     transition: 0.4s;
-    transform: scale(1.08);
+    transform: scale(1.04);
     box-shadow: 0 0 45px #555555;
 }
 
@@ -45,7 +48,7 @@ button:hover{
     size: 18px;
     border: 3px solid red;
     color: red;
-    width: 150px;
+    width: 100px;
     margin: 25px;
 }
 

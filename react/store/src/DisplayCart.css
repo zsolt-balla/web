@@ -1,0 +1,12 @@
+.DisplayCart{
+    /*min-width: 70%;
+    max-width: 1200px;
+    max-width: 90%;*/
+    width: 500px;
+
+    background: #DDDDDD;
+
+    padding: 40px 25px 25px;
+    display: flex;
+    flex-direction: column;
+}

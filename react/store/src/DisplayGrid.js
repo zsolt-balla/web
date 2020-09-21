@@ -9,7 +9,7 @@ import products from './products.json';
 const DisplayGrid = (props) => {
   const add = props.buyFunc;
   return (
-    <div class="DisplayGrid">
+    <div className="DisplayGrid">
       {products.map(p => <Product content={p} behaviour={add}/>)}
     </div>
   );

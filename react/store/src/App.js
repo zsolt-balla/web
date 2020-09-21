@@ -4,7 +4,7 @@ import DisplayGrid from './DisplayGrid.js';
 import DisplayCart from './DisplayCart.js';
 
 function App() {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState([]);
   // Probably the ugliest and most convoluted callback solution you've ever seen.
   // [I had a hard time understanding how passing objects from child to parent should work.]
   //
@@ -20,28 +20,44 @@ function App() {
     return(addPassedProp);
   }
 
+  const cartOpen = useState(false);
+
+  const searchTerm = useState('');
+
   // The removal does seem to work, however the rendering is not refreshed for some reason :/
   const removeItem = (product) => {
     const removePassedProp = () => {
+      // temp list (reference needs to change in order to automatically rerender)
+      const temp = [...cart];
       // get index of object with given title
-      //var temp = cart;
-      //var removeIndex = temp.map(function(item) { return item.title; }).indexOf(product.title);
+      var removeIndex = temp.map(function(item) { return item.title; }).indexOf(product.title);
       console.log('Trying to remove object product with title ' + product.title);
       // remove object
-      //temp.splice(removeIndex, 1);
-      //setCart(temp);
+      temp.splice(removeIndex, 1);
+      setCart(temp);
       
       // Short version without using setCart method:
-      var removeIndex = cart.map(function(item) { return item.title; }).indexOf(product.title);
-      cart.splice(removeIndex, 1);
+      // var removeIndex = cart.map(function(item) { return item.title; }).indexOf(product.title);
+      // cart.splice(removeIndex, 1);
     }
     return(removePassedProp);
   }
   
+  const open = 300;
+  const closed = 0;
+  var sideWidth = useState(closed);
+
+  const panelStyle = {
+    width: sideWidth,
+    background: "#DDDDDD"
+  }
+
+  
+
   return (
     <div className="App">
       <DisplayGrid buyFunc={addItemToCart}/>
-      <DisplayCart cartContent={cart} dropFunc={removeItem}/>    
+      <DisplayCart cartContent={cart} dropFunc={removeItem}/>        
     </div>
   );
 }
