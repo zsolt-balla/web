@@ -1,0 +1,66 @@
+.NavBar{
+    font-family: 'Merriweather';
+    width: 100%;
+    background:#70433f;
+    padding:0px 0px;
+    /*min-height:60px;*/
+}
+
+.NavBar a{
+    color:#ffffff;
+    /*text-transform:uppercase;*/
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#banner1{
+    padding: 30px;
+    background: #3f704d;
+}
+
+#logonamecont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-start;
+    font-size: 36px;
+    color: #ffffff;    
+}
+
+#socials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-end;
+    color: #ffffff;    
+}
+
+#logo{
+    max-height: 160px;
+    padding-right: 20px;
+}
+
+#banner2{
+    padding: 5px;
+    background:#306846;
+}
+
+#pages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+}
+
+.centered-container{
+    max-width: 1400px;
+    margin:auto;
+}
+
+@media (max-width: 1000px) {
+    #pages{
+        display: grid;
+        /*flex-direction: column;*/
+        justify-content: space-around;
+        padding-left: 30px; 
+    }
+}
