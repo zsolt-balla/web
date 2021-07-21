@@ -9,7 +9,7 @@ function NavBar() {
       <div id="banner1">
         <div class="centered-container" id="logonamecont">
           <img src="pots/logo.png" id="logo"/>
-          <p>Society Name</p>
+          <p>University Society Name</p>
         </div>
       </div>
       
